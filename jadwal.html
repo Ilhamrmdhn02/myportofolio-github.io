@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Jadwal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/tailwind.js"></script>
+</head>
+<body>
+  <nav class="bg-white p-4 pb-2 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+    <h1 class="text-2xl font-bold underline">ILHAM RAMADHAN</h1>
+      <!-- Hamburger Menu (for mobile) -->
+      <div class="md:hidden">
+        <button onclick="toggleMenu()" class="focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-5 mr-10 text-1xl">
+        <li><a href="/" class="font-bold hover:text-gray-700 transition-colors">HOME</a></li>
+  
+
+  
+        <li><a href="/galery.html" class="font-bold hover:text-gray-700 transition-colors">GALERI</a></li>
+        <li><a href="/jadwal.html" class="font-bold hover:text-gray-700 transition-colors">JADWAL</a></li>
+        <li><a href="/daerah.html" class="font-bold hover:text-gray-700 transition-colors">DAERAH</a></li>
+      </ul>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="/" onclick="closeMobileMenu()" class="font-bold hover:text-gray-700 transition-colors">HOME</a></li>
+        <li><a href="/galery.html" onclick="closeMobileMenu()" class="font-bold hover:text-gray-700 transition-colors">Galery</a></li>
+        <li><a href="/jadwal.html" onclick="closeMobileMenu()" class="font-bold hover:text-gray-700 transition-colors">Jadwal</a></li>
+        <li><a href="/daerah.html" onclick="closeMobileMenu()" class="font-bold hover:text-gray-700 transition-colors">Daerah</a></li>
+      </ul>
+    </div>
+</nav>
+
+    <section class="relative h-[400px] sm:h-[500px] lg:h-[600px]">
+      <!-- Hero Image -->
+      <img class="hero w-full h-full object-cover" src="assets/images/hero_galery.jpeg" alt="Hero Image">
+      
+      <!-- Overlay Text -->
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center lg:items-center px-4 sm:px-8 md:px-16 lg:px-24 z-1">
+        <img :src="icon" alt=""  class="w-32 mb-4 m-2 -mt-16" />
+
+        <h2 class="text-2xl sm:text-2xl md:text-5xl font-bold text-white">JADWAL KULIAH</h2>
+        <!-- <Typed class="mt-4 text-lg sm:text-xl md:text-2xl text-white" ref="typedElement" :strings="['Teknologi Kolaborasi dan Inovasi']" :typeSpeed="60" :backSpeed="20" :loop="100"/> -->
+      </div>
+    </section>
+
+    
+    <div class="container mx-auto px-4 py-12 mt-8">
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200 text-sm text-left text-gray-500 shadow-md rounded-lg">
+          <thead class="bg-gray-100 border-b border-gray-200">
+            <tr>
+              <th scope="col" class="px-6 py-3 font-semibold text-gray-700">Hari</th>
+              <th scope="col" class="px-6 py-3 font-semibold text-gray-700">Jam</th>
+              <th scope="col" class="px-6 py-3 font-semibold text-gray-700">Mata Kuliah</th>
+              <th scope="col" class="px-6 py-3 font-semibold text-gray-700">Ruangan</th>
+              <th scope="col" class="px-6 py-3 font-semibold text-gray-700">Dosen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b hover:bg-gray-50">
+              <td class="px-6 py-4">Senin</td>
+              <td class="px-6 py-4">16:20 - 18:00</td>
+              <td class="px-6 py-4">Bahasa Inggris Teknik</td>
+              <td class="px-6 py-4">Lab Komputer </td>
+              <td class="px-6 py-4">Irwan Sumarsono SS., M.Pd</td>
+            </tr>
+            <tr class="border-b hover:bg-gray-50">
+              <td class="px-6 py-4">Selasa</td>
+              <td class="px-6 py-4">16:20 - 18:00</td>
+              <td class="px-6 py-4">Konsep Teknologi Informasi</td>
+              <td class="px-6 py-4">Lab Komputer</td>
+              <td class="px-6 py-4">Dian Septiani Santoso M.Kom</td>
+            </tr>
+            <tr class="border-b hover:bg-gray-50">
+              <td class="px-6 py-4">Rabu</td>
+              <td class="px-6 py-4">16:20 - 18:00</td>
+              <td class="px-6 py-4">Matematika</td>
+              <td class="px-6 py-4">Lab Komputer</td>
+              <td class="px-6 py-4">Ira Prasetyanigarum S.Si.MT</td>
+            </tr>
+            <tr class="border-b hover:bg-gray-50">
+              <td class="px-6 py-4">Kamis</td>
+              <td class="px-6 py-4">16:20 - 18:00</td>
+              <td class="px-6 py-4">Pancasila</td>
+              <td class="px-6 py-4">Lab Komputer</td>
+              <td class="px-6 py-4">Widi sarinastiti ST.,MT</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4">Jumat</td>
+              <td class="px-6 py-4">16:20 - 18:00</td>
+              <td class="px-6 py-4">logika Dan Algoritma</td>
+              <td class="px-6 py-4">Lab Komputer</td>
+              <td class="px-6 py-4">Renovita Edelani S.ST.,M.Tr.KOM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+
+      <!-- start footer -->
+      <footer class="bg-[#0C0731] text-white py-10">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 gap-8">
+            
+            <!-- Logo and Address -->
+            <div class="md:col-span-1 col-span-1">
+                <h1 class="text-3xl font-bold">Ilham Ramadhan <br></h1>
+              <p class="mt-2 text-gray-300">
+                Politeknik Elektronika Negeri Surabaya
+              </p>
+              <p class="mt-5 text-gray-300">
+                Sepuluh Nopember Institute of Technology, Jl. Raya ITS, Keputih, Sukolilo, Surabaya, East Java 60111
+              </p>
+              <!-- Social Media Icons -->
+              <div class="mt-4 flex space-x-4 text-3xl">
+                <a href="https://www.instagram.com/himsicengkareng" target="_blank" class="hover:text-gray-600 cursor-pointer">📷</a>
+                <a href="https://www.tiktok.com/tag/ubsi_official" target="_blank" class="hover:text-gray-600 cursor-pointer">🎵</a>
+                <a href="https://www.youtube.com/@himsiunivbsicengkareng7950" target="_blank" class="hover:text-gray-600 cursor-pointer">▶️</a>
+              </div>
+            </div>
+  
+
+          </div>
+      
+          <!-- Footer Bottom -->
+          <div class="mt-10 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-center md:text-left">&copy; 2024. All rights reserved.</p>
+            <p class="text-center md:text-left w-full md:w-auto">
+              Developed with by <span class="font-semibold">ILHAM RAMADHAN</span>
+            </p>
+
+          </div>
+        </div>
+      </footer>
+
+      <!-- end footer -->
+       
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('hidden');
+        }
+      
+        function toggleDropdown() {
+          const dropdown = document.getElementById('desktopDropdown');
+          dropdown.classList.toggle('hidden');
+        }
+      
+        function toggleMobileDropdown() {
+          const mobileDropdown = document.getElementById('mobileDropdown');
+          mobileDropdown.classList.toggle('hidden');
+        }
+      
+        function closeMobileMenu() {
+          document.getElementById('mobileMenu').classList.add('hidden');
+          document.getElementById('mobileDropdown').classList.add('hidden');
+        }
+      </script>
+      
+</body>
+
+<script src="js/tailwind.config.js"></script>
+
+<style>
+    .hero {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); /* Darker shadow overlay for better text visibility */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 10px; /* Adjust this to make the scrollbar thicker/thinner */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ff9800; /* Scrollbar color */
+  border-radius: 10px; /* Make the edges rounded */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Background color of the scrollbar track */
+}
+</style>
+</html>
